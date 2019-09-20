@@ -5,19 +5,19 @@ import CharacterCard from './CharacterCard';
 
 const prepareStateFromWord = (value) => {
     let word = value.toUpperCase()
-    // let chars = _.shuffle(Array.from(word))
+    let chars = _.shuffle(Array.from(word))
     return{
-        word
-        // chars,
-        // attempt: 1,
-        // guess: [],
-        // completed: false
+        word,
+        chars,
+        attempt: 1,
+        guess: [],
+        completed: false
     }
 }
 
 export default class WordCard extends Component {
     
-    activationHandler= c=>{console.log(`${c} has been activated.`) }
+    activationHandler = c =>{console.log(`${c} has been activated.`) }
 
     // activationHandler = (c) =>{
     //     letguess = [...this.state.guess, c]
@@ -34,7 +34,7 @@ export default class WordCard extends Component {
     render() {
         return (
             <div>
-                { Array.from(this.props.value).map((c, i) => <CharacterCard value={c} key={i} activationHandler = {this.activationHandler}/>) }
+                { prepareStateFromWord(this.props.value).chars.map((c, i) => <CharacterCard value={c} key={i} activationHandler = {this.activationHandler}/>) }
 
 
             </div>
