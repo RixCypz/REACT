@@ -31,28 +31,36 @@ export default class WordCard extends Component {
                 this.setState({guess:[], completed:true})
                 console.log(`CONGRATULATIONS! YOU WIN`)
             }
-            else if(guess.join('').toString() != this.state.word){
-                this.setState({guess:[], completed:true})
-                console.log(`!`)
-            }
             else{
                 this.setState({guess:[], attempt:this.state.attempt+ 1})
+                console.log(`PLEASE SELECT THE CARD AGIAN!`)
             }
         }
     }
 
+    activate = () => {
+        this.setState({guess:[], attempt:this.state.attempt+ 1})
+    }
+
     render() {
         return (
+            
+            
             <div>
+                
+                <p>GUESS THE WORD</p>
+
                 { Array.from(this.state.chars).map((c, i) =>
                     <CharacterCard value={c} key={i} 
                     attempt = {this.state.attempt}
-                    activationHandler = {this.activationHandler}
-
-                    />) 
-                    
-                
+                    activationHandler = {this.activationHandler}/>) 
                 }
+                
+                <div>
+                    <button className="btn" onClick = {this.activate}>
+                        RESTART
+                    </button>
+                </div>
             </div>
         );
     }

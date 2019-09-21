@@ -17,6 +17,12 @@
   margin: 1em;
   user-select: none;
  }
+
+ .btn{
+  background-color: pink;
+  color: red;
+ }
+
  
 .App-header {
   background-color: #282c34;
@@ -34,8 +40,8 @@
 }
 
 .activeCard {
-  color: red;
-  background: pink;
+  color: gold;
+  background: black;
  }
 
 @keyframes App-logo-spin {
