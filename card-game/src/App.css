@@ -8,6 +8,14 @@
   pointer-events: none;
 }
 
+.h1{
+  color: blue;
+}
+
+.result{
+  color: blueviolet;
+}
+
 .card {
   display: inline-block;
   text-align: center;
@@ -19,8 +27,8 @@
  }
 
  .btn{
-  background-color: pink;
-  color: red;
+  background-color: gray;
+  color: white;
  }
 
  
