@@ -8,7 +8,7 @@ const word = "LOVE"
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="App">
                 <WordCard value = {word}/>
 
 
