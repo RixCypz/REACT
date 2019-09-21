@@ -22,6 +22,8 @@ export default class WordCard extends Component {
         this.state = prepareStateFromWord(this.props.value)
     }
 
+
+    
     activationHandler = (c) =>{
         console.log(`${c} has been activated.`)
         let guess = [... this.state.guess, c]
@@ -33,7 +35,7 @@ export default class WordCard extends Component {
             }
             else{
                 this.setState({guess:[], attempt:this.state.attempt+ 1})
-                console.log(`PLEASE SELECT THE CARD AGIAN!`)
+                console.log(`PLEASE SELECT THE CARD AGAIN!`)
                 
             }
         }
@@ -42,7 +44,6 @@ export default class WordCard extends Component {
     activate = () => {
         this.setState({guess:[], attempt:this.state.attempt + 1})
         this.state.completed = false
-        // this.state = prepareStateFromWord(this.props.value)
     }
 
     render() {
