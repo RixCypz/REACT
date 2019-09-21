@@ -41,13 +41,12 @@ export default class WordCard extends Component {
 
     activate = () => {
         this.setState({guess:[], attempt:this.state.attempt + 1})
+        this.state.completed = false
         // this.state = prepareStateFromWord(this.props.value)
     }
 
     render() {
         return (
-            
-            
             <div>
                 
                 <h1 className= "h1">GUESS THE WORD</h1>
@@ -56,13 +55,14 @@ export default class WordCard extends Component {
                     attempt = {this.state.attempt}
                     activationHandler = {this.activationHandler}/>) 
                 }
-                <div>
-                    <button className="btn" onClick = {this.activate}>
-                        RESTART
-                    </button>
-                </div>
 
                 <p className= "result">{this.state.completed? "CONGRATULATIONS!":""}</p>
+
+                <div>
+                    <button className="btn" onClick = {this.activate}>
+                        RESTART!
+                    </button>
+                </div>
 
             </div>
         );

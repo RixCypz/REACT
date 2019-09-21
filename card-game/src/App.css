@@ -9,10 +9,12 @@
 }
 
 .h1{
+  padding: 20px;
   color: blue;
 }
 
 .result{
+  padding: 50px;
   color: blueviolet;
 }
 
@@ -27,6 +29,7 @@
  }
 
  .btn{
+  padding: 20px;
   background-color: gray;
   color: white;
  }
